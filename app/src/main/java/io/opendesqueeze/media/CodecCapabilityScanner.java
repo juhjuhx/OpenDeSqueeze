@@ -24,7 +24,7 @@ public final class CodecCapabilityScanner {
                 try {
                     MediaCodecInfo.CodecCapabilities caps = info.getCapabilitiesForType(type);
                     MediaCodecInfo.VideoCapabilities video = caps.getVideoCapabilities();
-                    if (video == null || !video.areSizeSupported(width, height)) continue;
+                    if (video == null || !video.isSizeSupported(width, height)) continue;
                     int maxW = video.getSupportedWidths().getUpper();
                     int maxH = video.getSupportedHeights().getUpper();
                     result.add(new CodecPolicy.Candidate(info.getName(), mime, isHardware(info), maxW, maxH));
