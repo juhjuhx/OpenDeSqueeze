@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible OpenDeSqueeze problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: device
+    attributes:
+      label: Device / media details
+      description: Phone, Android version, SoC, source codec/resolution, squeeze factor, output codec.
+      placeholder: |
+        Device:
+        Android:
+        SoC:
+        Source codec:
+        Source resolution:
+        Squeeze:
+        Output codec:
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Remove private paths/media names/credentials before posting.

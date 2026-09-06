@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" role="img" aria-labelledby="title desc">
+  <title id="title">OpenDeSqueeze</title>
+  <desc id="desc">A 3:2 frame transforms through a downward arrow into a 2.35:1 widescreen frame.</desc>
+  <rect width="1500" height="1000" rx="72" fill="#0B0D10"/>
+  <g fill="none" stroke="#F4F6F8" stroke-width="22">
+    <rect x="520" y="120" width="460" height="307" rx="28"/>
+    <ellipse cx="750" cy="273.5" rx="78" ry="108"/>
+    <path d="M600 205 H900 M600 342 H900" opacity=".28"/>
+  </g>
+  <g stroke="#FFB000" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M750 470 V585"/>
+    <path d="M695 535 L750 590 L805 535"/>
+  </g>
+  <g fill="none" stroke="#F4F6F8" stroke-width="22">
+    <rect x="355" y="635" width="790" height="336" rx="28"/>
+    <ellipse cx="750" cy="803" rx="108" ry="108"/>
+    <path d="M470 735 H1030 M470 871 H1030" opacity=".28"/>
+  </g>
+  <text x="110" y="92" fill="#F4F6F8" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="54" letter-spacing="3">OPEN DESQUEEZE</text>
+  <text x="1110" y="92" fill="#FFB000" font-family="monospace" font-size="34" text-anchor="end">1.33× → 2.35:1</text>
+</svg>

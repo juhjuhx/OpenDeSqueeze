@@ -1,18 +1,32 @@
 # Building OpenDeSqueeze
 
+## Requirements
+
+- JDK 17
+- Android SDK Platform 36
+- Android Build Tools 36.0.0
+- Gradle 9.5.0
+- Android Gradle Plugin 9.3.0
+
+Minimum app runtime: Android 8.0 / API 26.
+
 ## Android Studio
 
-1. Install Android Studio with Android SDK Platform 36 and Build Tools 36.0.0.
-2. Open the repository root.
-3. Use JDK 17.
-4. Build the `app` debug variant.
-5. The APK is produced at `app/build/outputs/apk/debug/app-debug.apk`.
+1. Clone the repository.
+2. Open the repository root in Android Studio.
+3. Install Android SDK Platform 36 and Build Tools 36.0.0.
+4. Set the Gradle JDK to JDK 17.
+5. Build the `app` debug variant.
 
-The project uses Android Gradle Plugin 9.3.0. Official compatibility documentation lists Gradle 9.5.0 as the minimum for AGP 9.3, so CI pins Gradle 9.5.0.
+Output:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
 
 ## Command line
 
-With Android SDK and Gradle 9.5.0 available:
+With Android SDK/JDK/Gradle available:
 
 ```bash
 bash scripts/run-host-tests.sh
@@ -22,11 +36,31 @@ gradle :app:assembleDebug
 
 ## GitHub Actions
 
-`.github/workflows/android.yml` installs SDK 36 / Build Tools 36.0.0, runs the host tests and source checks, builds the debug APK, and uploads it as an Actions artifact.
+`.github/workflows/android.yml` performs:
 
-## Device requirements
+```text
+checkout
+  ↓
+JDK 17
+  ↓
+Android SDK 36
+  ↓
+Gradle 9.5
+  ↓
+host tests
+  ↓
+source checks
+  ↓
+:app:assembleDebug
+  ↓
+OpenDeSqueeze-debug-apk artifact
+```
 
-- Android 8.0 / API 26 minimum.
-- Android 8-9 additionally needs the legacy write-storage permission to publish MediaStore output.
-- AV1 MP4 export is only enabled on Android 14 / API 34 or newer because platform MediaMuxer support begins there.
-- HEVC/AVC availability and maximum dimensions are queried from MediaCodec at runtime.
+The CI artifact is a development/debug build. A persistent release key and formal release workflow should be added before treating CI output as a stable upgradable release channel.
+
+## Runtime notes
+
+- Android 8–9 use legacy write permission for MediaStore publication.
+- AV1 MP4 export is limited to Android versions where the platform muxer supports it.
+- HEVC/AVC availability and maximum output dimensions are queried at runtime.
+- A codec capability advertisement is not trusted as final; configure/start is still allowed to fail and trigger fallback.
