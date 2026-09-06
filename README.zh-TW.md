@@ -115,9 +115,9 @@ v0.1.x 的 HDR 是實驗功能。
 
 ## 安裝與建置
 
-目前提供 GitHub Actions 建出的 **debug APK artifact**，還沒有正式的固定 release signing。
+目前可直接從 GitHub Releases 下載 v0.1.1 debug preview；固定 release signing 尚未完成。
 
-- 想直接測：到 Actions 的成功 Build 下載 Artifact。
+- 想直接測：[下載 v0.1.1 Release](https://github.com/juhjuhx/OpenDeSqueeze/releases/tag/v0.1.1)。
 - 想自行建置：看 [BUILDING.md](BUILDING.md)。
 
 ## 開源與 Fork

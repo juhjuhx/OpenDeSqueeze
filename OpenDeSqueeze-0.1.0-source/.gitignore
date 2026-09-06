@@ -1,8 +1,0 @@
-.worktrees/
-.gradle/
-local.properties
-**/build/
-*.apk
-*.aab
-.DS_Store
-.host-test-out/

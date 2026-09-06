@@ -121,11 +121,11 @@ Your source files are read through Android's media/document APIs and outputs are
 
 ## Install / build
 
-The project currently publishes CI-built **debug APK artifacts** rather than a stable signed release.
+The latest public preview is available from GitHub Releases. It is still debug-signed while stable release signing is being prepared.
 
 You can:
 
-1. Open **Actions → Android APK → latest successful run → Artifacts**, or
+1. Download [OpenDeSqueeze v0.1.1](https://github.com/juhjuhx/OpenDeSqueeze/releases/tag/v0.1.1), or
 2. Build locally using [BUILDING.md](BUILDING.md).
 
 A stable release signing workflow is planned before a formal 1.0 release.

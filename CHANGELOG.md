@@ -12,6 +12,14 @@ All notable project changes should be recorded here.
 - Better HDR/10-bit validation.
 - Expanded UI polish and accessibility.
 
+## [0.1.1] - 2026-09-06
+
+### Changed
+
+- Added the lightweight VectorDrawable OpenDeSqueeze app icon.
+- Published the v0.1.1 debug preview APK and SHA-256 on GitHub Releases.
+
+
 ## [0.1.0] - 2026-09-06
 
 ### Added
